@@ -1,0 +1,21 @@
+<div class="row">
+  <div class="col-md-2">
+  </div>
+  <div class="col-md-8">
+    <div class="btn-group">
+      <button type="button" class="btn btn-default" (click)="goTo()">1</button>
+      <button type="button" class="btn btn-default" (click)="goTo(currentPage-1)">...</button>
+      <button *ngFor="let item of pageArr" type="button" class="btn btn-default btn-size" (click)="goTo(item)" [disabled]="item==currentPage || item>totalPages">{{item}}</button>
+      <button type="button" class="btn btn-default" (click)="goTo(currentPage+1)">...</button>
+      <button type="button" class="btn btn-default" (click)="goTo(totalPages)">{{totalPages}}</button>
+    </div>
+  </div>
+  <div class="col-md-2" >
+    <div class="input-group">
+      <input type="text" class="form-control" placeholder="Go to page" [(ngModel)] = "inpPage">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button" (click)="goTo(inpPage)" [disabled]="!inpPage">Go!</button>
+      </span>
+    </div>
+  </div>
+</div>

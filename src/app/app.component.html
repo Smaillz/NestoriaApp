@@ -1,0 +1,26 @@
+<nav-bar (sendPage)="send($event)"></nav-bar>
+<div class="loader" [ngClass]="{loader: loading}"></div>
+<div class="container" [hidden]="loading" align="center">
+  <div *ngIf="!jsonResponse">
+    <img src="http://risovach.ru/upload/2013/01/mem/privet_7531098_orig_.jpeg" width="700px" height="500px">
+  </div>
+  <div class="panel panel-default" *ngIf="!emptyLocation && jsonResponse">
+    <div class="panel-heading" *ngIf="jsonResponse">
+      <pagination-build [currentPage]="jsonResponse.request.page" [totalPages]="jsonResponse.response.total_pages" [currentCity]="locations"
+                        (sendPage)="send($event)" ></pagination-build>
+    </div>
+    <div class="panel-body">
+      <build-info *ngFor="let building  of buildingsList" [buildInfo]="building" [buildLocation]="locations"></build-info>
+    </div>
+    <div class="panel-footer" *ngIf="jsonResponse">
+      <pagination-build [currentPage]="jsonResponse.request.page" [totalPages]="jsonResponse.response.total_pages" [currentCity]="locations"
+                        (sendPage)="send($event)"></pagination-build>
+    </div>
+  </div>
+  <div  *ngIf="emptyLocation">
+    <img src="http://www.beautybythread.com/sacra/Pics/DataNotFound.jpg">
+  </div>
+</div>
+<div class="fixed_button">
+  <button class="btn btn-default" type="button" (click)="goTop()">Go UP!</button>
+</div>

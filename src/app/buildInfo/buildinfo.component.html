@@ -1,0 +1,83 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <div class="row">
+      <div class="col-md-10"><h4>{{buildInfo.title}}</h4></div>
+      <div class="col-md-2 test"><h4>{{buildLocation}}</h4></div>
+    </div>
+  </div>
+  <div class="panel-body bgr">
+    <div class="row">
+      <div class="col-md-4 padingTop">
+        <img src="{{buildInfo.img_url}}" height="{{buildInfo.img_height}}" width="{{buildInfo.img_width}}">
+        <div class="padingTop">
+          <img src="{{buildInfo.thumb_url}}" height="{{buildInfo.thumb_height}}"
+               width="{{buildInfo.thumb_width}}">
+          <img src="{{buildInfo.thumb_url}}" height="{{buildInfo.thumb_height}}"
+               width="{{buildInfo.thumb_width}}">
+          <img src="{{buildInfo.thumb_url}}" height="{{buildInfo.thumb_height}}"
+               width="{{buildInfo.thumb_width}}">
+          <img src="{{buildInfo.thumb_url}}" height="{{buildInfo.thumb_height}}"
+               width="{{buildInfo.thumb_width}}">
+        </div>
+        <div class="padingTopLeft" align="left">
+          <div class="padingTop">
+            <h4>
+              Type price: <span class="label label-danger">{{buildInfo.price_type}}</span>
+            </h4>
+          </div>
+          <div class="padingTop">
+            <h4>
+              Listing Type: <span class="label label-success">{{buildInfo.listing_type}}</span>
+            </h4>
+          </div>
+          <div class="padingTop">
+            <h4>
+              Updated: <span
+              class="label label-success">{{buildInfo.updated_in_days_formatted}}</span>
+            </h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-8" align="left">
+        <li class="list-group-item">
+          Bathroom Number: {{buildInfo.bathroom_number}},
+          Bedroom Number: {{buildInfo.bedroom_number}},
+          Car Spaces: {{buildInfo.car_spaces}}
+        </li>
+        <li class="list-group-item">Commission: {{buildInfo.commission}}</li>
+        <li class="list-group-item">Construction Year: {{buildInfo.construction_year}}</li>
+        <li class="list-group-item">Datasource name: {{buildInfo.datasource_name}}</li>
+        <li class="list-group-item">Floor: {{buildInfo.floor}}</li>
+        <li class="list-group-item"><h4>Keywords:</h4> {{buildInfo.keywords}}</li>
+        <li class="list-group-item">Liste Name: {{buildInfo.lister_name}}</li>
+        <li class="list-group-item">
+          <a href="{{buildInfo.lister_url}}">
+            <h4><span class="glyphicon glyphicon-hand-down"></span></h4>
+            <h4>Click if you want more informations</h4>
+          </a>
+        </li>
+        <li class="list-group-item">
+          <h4>
+            Current price: {{buildInfo.price_formatted}}
+          </h4>
+          <h5>
+            {{buildInfo.price_low}}{{buildInfo.price_currency}}-{{buildInfo.price_high}}{{buildInfo.price_currency}}
+          </h5>
+        </li>
+        <li class="list-group-item">
+          <h4>
+            Summary:
+          </h4>
+          {{buildInfo.summary}}
+        </li>
+      </div>
+    </div>
+  </div>
+  <div class="panel-footer">
+    <div class="row">
+      <div class="col-md-2"><h4>
+        Updated in days:<span class="badge">{{buildInfo.updated_in_days}}</span>
+      </h4></div>
+    </div>
+  </div>
+</div>

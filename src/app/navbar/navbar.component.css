@@ -1,0 +1,24 @@
+.inpleng{
+  padding-top: 8px;
+  width: 600px;
+}
+
+.ulSearch{
+  padding: 0px;
+}
+
+.lifesearch{
+  z-index: 100;
+  padding-bottom: 0px;
+  height: 40px;
+  width: 200px;
+}
+
+.form-text:hover {
+  background: #67c6ff;
+}
+
+.pos{
+  z-index: 100;
+  position: absolute;
+}

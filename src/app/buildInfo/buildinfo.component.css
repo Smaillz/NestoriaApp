@@ -1,0 +1,17 @@
+.bgr{
+  background: url(http://www.evropa.nikopol.net/fon2/bg_45.jpg);
+  padding: 0px;
+}
+
+.padingTop{
+  padding-top: 10px;
+}
+
+.padingTopLeft{
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.test:first-letter {
+  text-transform: uppercase;
+}
